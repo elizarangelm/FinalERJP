@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="FinalERJP.Views.FacturaPage"
+             xmlns:tdr="clr-namespace:FinalERJP.Helpers"
+             Title="{tdr:Translate Factura}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="Layout1" Margin="20">
+                <Label Text="{tdr:Translate Celulares}" FontAttributes="Bold"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{tdr:Translate Nombre}"/>
+                    <Label Text="{Binding Nombre}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{tdr:Translate Descripcion}"/>
+                    <Label Text="{Binding Descripcion}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{tdr:Translate Referencia}"/>
+                    <Label Text="{Binding Referencia}"/>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout x:Name="Layout2" >
+                <StackLayout  Margin="20">
+                    <Label Text="{tdr:Translate InformacionDeCompra}" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate Precio}"/>
+                        <Label Text="{Binding Precio}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate CantidadDeCelulares}"/>
+                        <Label x:Name="Label21" Text=""/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate Total}"/>
+                        <Label x:Name="vartotal"  Text=""/>
+                    </StackLayout>
+                    <Button Clicked="Confirmar" Text="{tdr:Translate ConfirmarCompra}"/>
+                    <Button Clicked="Camara_Clicked" Text="{tdr:Translate Camara}"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
